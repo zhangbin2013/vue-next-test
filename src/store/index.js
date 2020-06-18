@@ -1,15 +1,18 @@
-import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.use(Vuex)
-
-export default new Vuex.Store({
+export default Vuex.createStore({
   state: {
+      test: {
+          a: 1
+      }
   },
   mutations: {
+      setTestA(state, value) {
+          state.test.a = value
+      }
   },
   actions: {
   },
   modules: {
   }
-})
+});
