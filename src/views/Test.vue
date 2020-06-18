@@ -4,6 +4,7 @@
         <p>少年你的头发可还好，？？？？ 哈哈哈哈哈</p>
         <h1>test count: {{count}}</h1>
         <div>count * 2 = {{doubleCount}}</div>
+        <input type="text" v-model="count">
         <div>state from vuex {{a}}</div>
         <button @click="add">add</button><br/>
         <button @click="update">update a</button>
