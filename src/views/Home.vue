@@ -24,23 +24,31 @@ export default {
     demo: {
       // 只调用一次，指令第一次绑定到元素时调用
       // 在这里可以进行一次性的初始化设置 el.parentNode -> null
+      //vue3. beforeMount
       bind(el, binding, vnode) {},
 
       // 被绑定元素插入父节点时调用   el.parentNode 访问当前节点的父节点
       // 仅保证父节点存在，但不一定已插入到文档中!!!
+      // vue3. mounted
       inserted(el, binding, vnode) {},
 
       // 所在组件的VNode 更新时调用
       // 但是可能发生在其子VNode更新之前
       // 指令的值可能发生了改变，也可能没有
       // 但是可以通过比较更新前后的值来忽略不必要的模板更新
+      //vue3. beforeUpdate
       update(el, binding, vnode, oldVnode){},
 
       // 指令所在在组件的VNode 及其子VNode 全部更新后调用
       // eslint-disable-next-line no-unused-vars
+      // vue3. updated
       componentUpdated(el, binding, vnode, oldVnode){},
 
+
+      //**beforeUnmount ** 新的！与组件生命周期钩子类似，它将在卸载元素之前调用。
+
       // 只调用一次，指令与元素解绑时调用
+      // vue3. unmounted
       unbind(el, binding, vnode){}
     }
     /*function(
